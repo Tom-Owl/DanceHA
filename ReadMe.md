@@ -23,7 +23,7 @@ Our contributions are as follows:
 ```
 python ./code/Dance.py 
 python ./code/MA.py
-python ./code/llm_as_judge.py
+python ./code/LLM-as-Judge.py
 ```
 
 
