@@ -12,7 +12,7 @@ Our results highlight the importance of the overlooked informal styles in ABSIA,
 
 
 ![DanceCase](./img/DanceCase.png)
-*Figure 2: A running case of Dance for document-level ABSIA with expert agents collaboration, more technical details are provided in Section \ref{sec:DanceMA}
+*Figure 2: A running case of Dance for document-level ABSIA with expert agents collaboration.
 
 ### Human evaluation page
 ![DanceCase](./img/Human_eval.png)
