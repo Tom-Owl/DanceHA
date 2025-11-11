@@ -41,12 +41,11 @@ def meta_judge(input_doc, absis_gpt_4o, absis_gpt_35_turbo, absis_gpt_4o_mini, d
 
     4. **Sentiment Polarity:** Classify the sentiment of each aspect as positive, negative, or neutral.
 
-    5. **Sentiment Intensity Score:** Assign an intensity score from -5 to 5 for each aspect-category-opinion-sentiment tuple. The scale should reflect the strength of the sentiment, where:  
-    - Slight/moderate positive: 1 to 2  
-    - Strong positive: 4 to 5  
+    5. **Sentiment Intensity Score:** Assign an intensity score from 0 to 5 for each aspect-category-opinion-sentiment tuple. The scale should reflect the strength of the sentiment, where:  
+    - Slight/moderate: 1 to 2  
+    - Strong sentiment: 4 to 5  
     - Neutral or factual: 0  
-    - Slight/moderate negative: -1 to -2  
-    - Strong negative: -4 to -5  
+    
 
     **Your final output must integrate and reconcile the differences from the results of the three LLM agents to produce one definitive ABSA result.** The three agents’ outputs, as well as the input text, will be provided to you. Use their analyses to guide your final decisions, ensuring the conclusion is grounded in their collective findings.
 

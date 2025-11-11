@@ -220,7 +220,7 @@ def agent_sentiment_analysis(thought_groups_with_opinion_terms, model='gpt-4o'):
     Determines sentiment polarity and intensity for each aspect-category-opinion tuple.
     """
     prompt = """
-    You are a Sentiment Analysis Agent. For each aspect-category-opinion tuple, determine the sentiment polarity (positive, negative) and assign a sentiment intensity score. Sentiment intensity scores range from -5 to 5, reflecting sentiment strength. Slight/moderate terms score -1 to -2 (negative) or 1 to 2 (positive). Strong/emphatic terms (e.g., "very delicious," "AWESOME!!!") score 4-5, while neutral or factual terms score 0.
+    You are a Sentiment Analysis Agent. For each aspect-category-opinion tuple, determine the sentiment polarity (positive, negative) and assign a sentiment intensity score. Sentiment intensity scores range from 0 to 5, reflecting sentiment strength. Slight/moderate terms score 1-2. Strong/emphatic terms (e.g., "very delicious," "AWESOME!!!") score 4-5, while neutral or factual terms score 0.
     
     Input Format:
     [
@@ -237,7 +237,7 @@ def agent_sentiment_analysis(thought_groups_with_opinion_terms, model='gpt-4o'):
         {
             "group_id": <id>,
             "sentiment_polarity": "<positive|negative|neutral>",
-            "sentiment_intensity_score": "<-5 to 5>"
+            "sentiment_intensity_score": "<0 to 5>"
         }
     ]
     """
@@ -350,7 +350,7 @@ def w_o_DC(input_doc, domain, model='gpt-4o'):
     Extract words or phrases reflecting sentiment intensity for each thought group. Opinion terms must be extracted as explicit substrings from the text, preserving punctuation, lengthening expressions, and uppercase spelling. Each opinion terms should be less than 5 words.
 
     ## Task4: Sentiment Analysis with Intensity Score. 
-    Eetermine the sentiment polarity (positive, negative) and assign a sentiment intensity score. Sentiment intensity scores range from -5 to 5, reflecting sentiment strength. Slight/moderate terms score -1 to -2 (negative) or 1 to 2 (positive). Strong/emphatic terms (e.g., "very delicious," "AWESOME!!!") score 4-5, while neutral or factual terms score 0.
+    Eetermine the sentiment polarity (positive, negative) and assign a sentiment intensity score. Sentiment intensity scores range from 0 to 5, reflecting sentiment strength. Slight/moderate terms score 1-2. Strong/emphatic terms (e.g., "very delicious," "AWESOME!!!") score 4-5, while neutral or factual terms score 0.
     
     """.format(categories_options) + \
     """
@@ -363,7 +363,7 @@ def w_o_DC(input_doc, domain, model='gpt-4o'):
                 "category": "<category>",
                 "opinion_term": "opinion_term": ["<opinion_term_1>", "<opinion_term_2>", ...]
                 "sentiment_polarity": "<positive|negative|neutral>",
-                "sentiment_intensity_score": "<-5 to 5>"
+                "sentiment_intensity_score": "<0 to 5>"
             }
             ....
         ]
@@ -387,7 +387,7 @@ def w_o_Teamwork(thought_group, domain, model='gpt-4o'):
     Extract words or phrases reflecting sentiment intensity for each thought group. Opinion terms must be extracted as explicit substrings from the text, preserving punctuation, lengthening expressions, and uppercase spelling. Each opinion terms should be less than 5 words.
 
     ## Task3: Sentiment Analysis with Intensity Score. 
-    Eetermine the sentiment polarity (positive, negative) and assign a sentiment intensity score. Sentiment intensity scores range from -5 to 5, reflecting sentiment strength. Slight/moderate terms score -1 to -2 (negative) or 1 to 2 (positive). Strong/emphatic terms (e.g., "very delicious," "AWESOME!!!") score 4-5, while neutral or factual terms score 0.
+    Eetermine the sentiment polarity (positive, negative) and assign a sentiment intensity score. Sentiment intensity scores range from 0 to 5, reflecting sentiment strength. Slight/moderate terms score 1-2. Strong/emphatic terms (e.g., "very delicious," "AWESOME!!!") score 4-5, while neutral or factual terms score 0.
     """.format(categories_options) + \
     """
     ### Input format:
@@ -410,7 +410,7 @@ def w_o_Teamwork(thought_group, domain, model='gpt-4o'):
                 "category": "<category>",
                 "opinion_term": "opinion_term": ["<opinion_term_1>", "<opinion_term_2>", ...]
                 "sentiment_polarity": "<positive|negative|neutral>",
-                "sentiment_intensity_score": "<-5 to 5>"
+                "sentiment_intensity_score": "<0 to 5>"
             }
             ....
         ]

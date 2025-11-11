@@ -24,7 +24,6 @@ Our results highlight the importance of the overlooked informal styles in ABSIA,
 python ./code/Dance.py # Run Dance
 python ./code/MA.py # Run MA
 python ./code/reasoning_distillation/run_exp.py # Run reasoning finetuning and inference 
-streamlit run ./code/human_evaluation.py 
 ```
 
 
