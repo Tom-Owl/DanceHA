@@ -1,5 +1,8 @@
 DanceHA: Multi-Agents Framework for Open-ended Document-level Aspect-Based Sentiment Intensity Analysis with Informal Styles
 -----------------------------
+## Update
+[DanceHA](https://github.com/Tom-Owl/DanceHA/blob/main/DanceHA_AAAI26_CR.pdf) has been accepted to AAAI 2026 Main Track (acceptance rate 17.6%), appearing!!!
+
 ## Overview
 In this work, we introduces \textbf{DanceHA}, a multi-agent framework for open-ended document-level ABSIA with informal styles. It comprises two components: Dance, which applies a divide-and-conquer principle to decompose the complex ABSIA task into the collaboration of expert agents, and HA, Human-AI collaboration for annotation to generate fine-grained and high-accuracy labels. We release Inf-ABSIA, a multi-domain document-level ABSIA dataset featuring fine-grained and high-accuracy labels from DanceHA.
 Extensive experiments demonstrate the effectiveness of our agentic framework and show that the multi-agent knowledge in DanceHA can be effectively transferred into student models.
